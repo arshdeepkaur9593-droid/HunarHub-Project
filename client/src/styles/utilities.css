@@ -1,0 +1,23 @@
+@layer utilities {
+
+    .flex-center{
+        @apply flex justify-center items-center;
+    }
+
+    .flex-between{
+        @apply flex justify-between items-center;
+    }
+
+    .grid-2{
+        @apply grid grid-cols-1 lg:grid-cols-2 gap-12;
+    }
+
+    .grid-3{
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+    }
+
+    .grid-4{
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6;
+    }
+
+}

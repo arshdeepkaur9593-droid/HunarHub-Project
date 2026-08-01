@@ -1,0 +1,31 @@
+@theme {
+
+  /* BRAND COLORS */
+
+  --color-primary: #2563EB;
+  --color-primary-hover: #1D4ED8;
+  --color-secondary: #3B82F6;
+  --color-accent: #60A5FA;
+
+  /* BACKGROUND */
+
+  --color-background: #F8FAFC;
+  --color-surface: #FFFFFF;
+
+  /* TEXT */
+
+  --color-heading: #111827;
+  --color-text: #4B5563;
+  --color-light-text: #6B7280;
+
+  /* BORDER */
+
+  --color-border: #E5E7EB;
+
+  /* STATUS */
+
+  --color-success: #16A34A;
+  --color-warning: #F59E0B;
+  --color-danger: #DC2626;
+
+}

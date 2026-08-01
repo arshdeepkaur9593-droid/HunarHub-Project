@@ -1,0 +1,66 @@
+@layer components {
+
+  /* ---------- Container ---------- */
+
+  .container-custom {
+      @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+/* Navbar aur Hero section ke beech ka gap zero karne ke liye */
+nav, header {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.hero-section, section:first-of-type {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+  /* ---------- Section ---------- */
+
+  /* Normal sections ke liye padding */
+  .section {
+      @apply py-16 md:py-20;
+  }
+
+  /* Hero section ke liye (navbar ke sath bilkul attach hone ke liye) */
+  .hero-section {
+      @apply pt-0 pb-16 md:pb-20;
+  }
+
+  /* ---------- Headings ---------- */
+
+  .heading {
+      @apply text-4xl sm:text-5xl font-bold text-gray-900;
+  }
+
+  .section-title {
+      @apply text-3xl sm:text-4xl font-bold text-gray-900;
+  }
+
+  .sub-heading {
+      @apply text-base sm:text-lg text-gray-600 mt-4 leading-relaxed;
+  }
+
+  /* ---------- Buttons ---------- */
+
+  .btn-primary {
+      @apply bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 inline-block text-center;
+  }
+
+  .btn-secondary {
+      @apply border border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-xl font-medium transition-all duration-300 inline-block text-center;
+  }
+
+  /* ---------- Card ---------- */
+
+  .card {
+      @apply bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition-all duration-300;
+  }
+
+  /* ---------- Input ---------- */
+
+  .input {
+      @apply w-full border border-gray-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-600 transition-all duration-200;
+  }
+
+}
