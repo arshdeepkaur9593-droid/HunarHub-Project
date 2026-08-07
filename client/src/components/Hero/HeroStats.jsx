@@ -13,8 +13,8 @@ function HeroStats() {
       <div className="flex items-center gap-3">
         <FiUser className="text-lg text-indigo-600" />
         <div>
-          <h3 className="text-lg font-bold text-indigo-600">500+</h3>
-          <p className="text-xs text-gray-500">
+          <p className="text-lg font-bold text-indigo-600">500+</p>
+          <p className="text-xs text-gray-700">
             Skilled Entrepreneurs
           </p>
         </div>
@@ -23,8 +23,8 @@ function HeroStats() {
       <div className="flex items-center gap-3">
         <FiBriefcase className="text-lg text-indigo-600" />
         <div>
-          <h3 className="text-lg font-bold text-indigo-600">2000+</h3>
-         <p className="text-xs text-gray-500">
+          <p className="text-lg font-bold text-indigo-600">2000+</p>
+         <p className="text-xs text-gray-700">
             Services Listed
           </p>
         </div>
@@ -33,8 +33,8 @@ function HeroStats() {
       <div className="flex items-center gap-3">
         <FiHeart className="text-lg text-indigo-600" />
         <div>
-          <h3 className="text-lg font-bold text-indigo-600">1000+</h3>
-          <p className="text-xs text-gray-500">
+          <p className="text-lg font-bold text-indigo-600">1000+</p>
+          <p className="text-xs text-gray-700">
             Happy Customers
           </p>
         </div>
@@ -43,8 +43,8 @@ function HeroStats() {
       <div className="flex items-center gap-3">
         <FiGrid className="text-lg text-indigo-600" />
         <div>
-          <h3 className="text-lg font-bold text-indigo-600">50+</h3>
-          <p className="text-xs text-gray-500">
+          <p className="text-lg font-bold text-indigo-600">50+</p>
+          <p className="text-xs text-gray-700">
             Categories
           </p>
         </div>

@@ -4,7 +4,7 @@ import Container from "../Container/Container";
 
 const Navbar = () => {
   return (
-    <nav className="bg-white border-b border-slate-100 py-4 shadow-none mb-0">
+    <nav className="bg-white border-b  border-slate-100 py-4 h-16 shadow-none mb-0">
       <Container>
         <div className="flex items-center justify-between gap-4">
           {/* Left: Brand Logo */}
@@ -66,10 +66,13 @@ const Navbar = () => {
             <div className="relative hidden md:block flex-1 min-w-50 max-w-xs">
               <input
                 type="text"
+                aria-label="Search for skills and services"
                 placeholder="Search for skills, services..."
-                className="w-full bg-slate-50 border border-slate-200 text-xs rounded-full py-2.5 pl-4 pr-9 focus:outline-none focus:border-indigo-700 focus:bg-white text-slate-700 placeholder:text-slate-400 transition-all"
+                className="w-full bg-slate-50 border border-slate-200 text-xs rounded-full py-2.5 pl-4 pr-9 focus:outline-none focus:border-indigo-700 focus:bg-white text-slate-700 placeholder:text-slate-700 transition-all"
               />
-              <FiSearch className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-base" />
+              <FiSearch 
+               aria-hidden="true"
+              className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-700 text-base" />
             </div>
 
             {/* Buttons */}

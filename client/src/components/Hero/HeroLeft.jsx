@@ -4,13 +4,13 @@ import HeroStats from "./HeroStats";
 
 function HeroLeft() {
   return (
-    <div className="space-y-5  l -translate-y-22">
+    <div className="space-y-1  -translate-y-8">
       {/* Heading */}
       <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
-        Discover Local Skills.
+        Discover Local Skills
         <br />
         <span className="text-indigo-600">
-          Empower Real Lives.
+          Empower Real Lives
         </span>
       </h1>
 

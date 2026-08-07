@@ -1,101 +1,45 @@
  @import "tailwindcss"; 
-/* 
-/* /* ===========================
-   HUNARHUB DESIGN SYSTEM
+
+
+   /* ===========================
+   HERO FLOATING CARD ANIMATION
 =========================== */
 
-/* @theme { */
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
 
-  /* COLORS */
-/* 
-  --color-primary: #2563eb;
-  --color-primary-dark: #1d4ed8;
-  --color-secondary: #f59e0b;
-  --color-accent: #10b981;
-
-  --color-background: #f8fafc;
-  --color-surface: #ffffff;
-
-  --color-heading: #0f172a;
-  --color-text: #1f2937;
-  --color-text-light: #6b7280;
-
-  --color-border: #e5e7eb;
-
-  --color-success: #22c55e;
-  --color-warning: #f59e0b;
-  --color-danger: #ef4444;
-  --color-info: #0ea5e9;
-
-
-  /* FONT */
-/* 
-  --font-sans: "Inter", sans-serif; */
-
-
-  /* RADIUS */
-
-  /* --radius-xs: 4px;
-  --radius-sm: 6px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
-  --radius-2xl: 24px; */
-
-
-  /* SHADOW */
-
-  /* --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 8px rgb(0 0 0 / 0.08);
-  --shadow-lg: 0 10px 20px rgb(0 0 0 / 0.12);
-} */
-
-
-/* ===========================
-   GLOBAL CSS
-=========================== */
-
-
-/* *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
+@keyframes floatMedium {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
 
-html{
-  scroll-behavior:smooth;
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
+@keyframes floatFast {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
 
-body{
-  background-color: var(--color-background);
-  color: var(--color-text);
-  font-family: var(--font-sans);
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
-
-a{
-  text-decoration:none;
-  color:inherit;
+@theme {
+  --animate-float-slow: floatSlow 5s ease-in-out infinite;
+  --animate-float-medium: floatMedium 4.5s ease-in-out infinite;
+  --animate-float-fast: floatFast 4s ease-in-out infinite;
 }
-
-
-button{
-  cursor:pointer;
-}
-
-
-img{
-  max-width:100%;
-  display:block;
-}
-
-
-ul{
-  list-style:none;
-} 
- 
-
-
-   */
