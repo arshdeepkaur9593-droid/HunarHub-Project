@@ -1,3 +1,4 @@
+
 import React from "react";
 import Container from "../Container/Container";
 import HeroLeft from "./HeroLeft";
@@ -5,10 +6,14 @@ import HeroRight from "./HeroRight";
 
 function Hero() {
   return (
-    <section className="bg-indigo-50 px-1.5 overflow-hidden">
+    <section
+      className="relative overflow-hidden"
+      style={{
+        backgroundColor: "#FFE8D4",
+      }}
+    >
       <Container>
-        {/* Hero Content */}
-        <div className="grid lg:grid-cols-2 items-center gap-12 min-h-[calc(100vh-100px)]">
+        <div className="relative grid min-h-[calc(100vh-112px)] items-center gap-10 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-6 lg:py-10">
           <HeroLeft />
           <HeroRight />
         </div>

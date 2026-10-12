@@ -1,8 +1,8 @@
+
 import React from "react";
 import FloatingCard from "./FloatingCard";
 import RatingCard from "./RatingCard";
 
-// Images
 import person from "../../assets/images/hero-entrepreneur.webp";
 import tailoring from "../../assets/images/tailoring.webp";
 import pottery from "../../assets/images/pottery.webp";
@@ -11,19 +11,34 @@ import crafts from "../../assets/images/handmade-crafts.webp";
 
 function HeroRight() {
   return (
-    <div className="relative w-full h-88 l -translate-y-8">
-      {/* Background Circle */}
-      <div className="absolute left-1/2 top-10 -translate-x-1/2 w-96 h-96 rounded-full bg-violet-200"></div>
+    <div className="relative mx-auto h-[500px] w-full max-w-[560px] lg:h-[560px]">
 
-      {/* Hero Image */}
-      <img
-        src={person}
-        alt="Hero Entrepreneur"
-        className="absolute left-1/2 top-0 -translate-x-1/2 w-72 object-contain z-20"
+      {/* Main Background Shape */}
+      <div
+        className="absolute left-1/2 top-1/2 h-[390px] w-[390px] -translate-x-1/2 -translate-y-1/2 rounded-full"
+        style={{
+          backgroundColor: "var(--color-accent-soft)",
+        }}
       />
 
-      {/* Top Left Card */}
-      <div className="absolute left-4 top-8 z-30 animate-float-slow">
+      {/* Secondary Shape */}
+      <div
+        className="absolute left-1/2 top-1/2 h-[310px] w-[310px] -translate-x-1/2 -translate-y-1/2 rounded-full border"
+        style={{
+          borderColor: "var(--color-accent-light)",
+          opacity: 0.35,
+        }}
+      />
+
+      {/* Main Person */}
+      <img
+        src={person}
+        alt="Local entrepreneur"
+        className="absolute left-1/2 top-1/2 z-20 h-[430px] w-auto -translate-x-1/2 -translate-y-[58%] object-contain"
+      />
+
+      {/* Tailoring */}
+      <div className="absolute left-0 top-12 z-30">
         <FloatingCard
           image={tailoring}
           title="Tailoring"
@@ -31,8 +46,8 @@ function HeroRight() {
         />
       </div>
 
-      {/* Top Right Card */}
-      <div className="absolute right-4 top-8 z-30 animate-float-medium">
+      {/* Pottery */}
+      <div className="absolute right-0 top-12 z-30">
         <FloatingCard
           image={pottery}
           title="Pottery"
@@ -40,8 +55,8 @@ function HeroRight() {
         />
       </div>
 
-      {/* Bottom Left Card */}
-      <div className="absolute left-0 top-56 z-30 animate-float-fast">
+      {/* Home Services */}
+      <div className="absolute bottom-16 left-0 z-30">
         <FloatingCard
           image={home}
           title="Home Services"
@@ -49,9 +64,8 @@ function HeroRight() {
         />
       </div>
 
-      {/* Bottom Right Card */}
-      <div className="absolute right-0 top-56 z-30 animate-float-medium">
-
+      {/* Handmade Crafts */}
+      <div className="absolute bottom-16 right-0 z-30">
         <FloatingCard
           image={crafts}
           title="Handmade Crafts"
@@ -59,8 +73,8 @@ function HeroRight() {
         />
       </div>
 
-      {/* Rating Card */}
-      <div className="absolute top-100 w-55  left-1/2 -translate-x-1/2 z-30">
+      {/* Rating */}
+      <div className="absolute bottom-0 left-1/2 z-40 -translate-x-1/2">
         <RatingCard />
       </div>
     </div>
