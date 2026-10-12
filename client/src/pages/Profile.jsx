@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import {
   FiUser,
@@ -16,7 +15,8 @@ import {
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
-const API_URL = "http://localhost:5000/api/users";
+const API_URL =
+  import.meta.env.VITE_API_URL || "http://localhost:5000/api/users";
 
 const initialForm = {
   name: "",
@@ -205,9 +205,7 @@ function Profile() {
         className="flex min-h-[60vh] items-center justify-center"
         style={{ backgroundColor: "var(--color-background)" }}
       >
-        <p style={{ color: "var(--color-muted)" }}>
-          Loading your profile...
-        </p>
+        <p style={{ color: "var(--color-muted)" }}>Loading your profile...</p>
       </main>
     );
   }
@@ -255,7 +253,10 @@ function Profile() {
           >
             My Profile
           </h1>
-          <p className="mt-2 text-sm sm:text-base" style={{ color: "var(--color-muted)" }}>
+          <p
+            className="mt-2 text-sm sm:text-base"
+            style={{ color: "var(--color-muted)" }}
+          >
             Manage your personal information and contact details.
           </p>
         </div>
@@ -285,7 +286,10 @@ function Profile() {
               {user.name}
             </h2>
 
-            <p className="mt-1 break-all text-sm" style={{ color: "var(--color-muted)" }}>
+            <p
+              className="mt-1 break-all text-sm"
+              style={{ color: "var(--color-muted)" }}
+            >
               {user.email}
             </p>
 
@@ -334,7 +338,10 @@ function Profile() {
                 >
                   Personal Information
                 </h2>
-                <p className="mt-1 text-sm" style={{ color: "var(--color-muted)" }}>
+                <p
+                  className="mt-1 text-sm"
+                  style={{ color: "var(--color-muted)" }}
+                >
                   Your account details
                 </p>
               </div>
@@ -409,9 +416,7 @@ function Profile() {
                           type={field.type || "text"}
                           min={field.name === "age" ? 1 : undefined}
                           max={field.name === "age" ? 120 : undefined}
-                          maxLength={
-                            field.name === "name" ? 60 : undefined
-                          }
+                          maxLength={field.name === "name" ? 60 : undefined}
                           required={field.required || false}
                           readOnly={!editing}
                           value={formData[field.name]}
@@ -458,14 +463,18 @@ function Profile() {
                       }}
                     />
                   </div>
-                  <p className="mt-1.5 text-xs" style={{ color: "var(--color-muted)" }}>
+                  <p
+                    className="mt-1.5 text-xs"
+                    style={{ color: "var(--color-muted)" }}
+                  >
                     Email address cannot be changed here.
                   </p>
                 </div>
               </div>
 
               {editing && (
-                <div className="mt-7 flex flex-wrap justify-end gap-3 border-t pt-5"
+                <div
+                  className="mt-7 flex flex-wrap justify-end gap-3 border-t pt-5"
                   style={{ borderColor: "var(--color-border-light)" }}
                 >
                   <button
