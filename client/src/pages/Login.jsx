@@ -61,9 +61,24 @@ function Login() {
     setLoading(true);
 
     try {
-      await login(formData.email.trim(), formData.password);
+      const result = await login(
+        formData.email.trim(),
+        formData.password,
+      );
+
       setSuccess("Login successful! Redirecting...");
-      setTimeout(() => navigate("/", { replace: true }), 800);
+
+      const roleRoutes = {
+        customer: "/",
+        entrepreneur: "/entrepreneur/dashboard",
+        admin: "/admin/dashboard",
+      };
+
+      const destination = roleRoutes[result?.data?.user?.role] || "/";
+
+      setTimeout(() => {
+        navigate(destination, { replace: true });
+      }, 800);
     } catch (err) {
       setError(err.message || "Login failed. Please try again.");
     } finally {
@@ -326,7 +341,9 @@ function Login() {
 
                   <button
                     type="button"
-                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                    onClick={() =>
+                      setShowConfirmPassword(!showConfirmPassword)
+                    }
                     className="absolute right-3 top-1/2 z-10 -translate-y-1/2"
                     style={{ color: "var(--color-muted)" }}
                     aria-label={
