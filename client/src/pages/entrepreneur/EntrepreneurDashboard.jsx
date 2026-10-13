@@ -24,7 +24,7 @@ const ENDPOINTS = {
   products: "/api/products",
   services: "/api/services",
   orders: "/api/orders",
-  requests: "/api/service-requests",
+  requests: "/api/service-requests/entrepreneur",
 };
 
 const getItems = (result) => {
