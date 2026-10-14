@@ -1,5 +1,6 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Navigate, Outlet, Routes, Route } from "react-router-dom";
+import { useAuth } from "./context/AuthContext";
 
 // ================= NAVBAR =================
 import { Header } from "./components/Navbar";
@@ -79,6 +80,27 @@ function Home() {
   );
 }
 
+function EntrepreneurRoute() {
+  const { user, loading } = useAuth();
+
+  if (loading) return null;
+
+  if (!user) {
+    return <Navigate to="/login" replace />;
+  }
+
+  if (user.role !== "entrepreneur") {
+    return (
+      <Navigate
+        to={user.role === "admin" ? "/admin/dashboard" : "/"}
+        replace
+      />
+    );
+  }
+
+  return <Outlet />;
+}
+
 // =====================================================
 // APP
 // =====================================================
@@ -138,6 +160,7 @@ function App() {
 
         {/* ================= ENTREPRENEUR PANEL ================= */}
 
+        <Route element={<EntrepreneurRoute />}>
         {/* Dashboard */}
         <Route
           path="/entrepreneur/dashboard"
@@ -190,6 +213,7 @@ function App() {
           path="/entrepreneur/availability"
           element={<ManageAvailability />}
         />
+        </Route>
 
         {/* ================= ADMIN PANEL ================= */}
 

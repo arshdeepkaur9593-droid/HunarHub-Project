@@ -300,7 +300,7 @@ export default function EntrepreneurProfile() {
           {!isEditing ? (
             <button
               onClick={handleEdit}
-              className="flex items-center justify-center gap-2 rounded-[var(--radius-md)] bg-[var(--color-blue)] px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[var(--color-blue-dark)] hover:shadow-md"
+              className="group inline-flex items-center justify-center gap-1.5 rounded-md bg-[#6D28D9] px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#F97316] hover:text-[#1F1235] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-offset-2"
             >
               <Pencil size={17} />
               Edit Profile
