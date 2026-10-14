@@ -2,6 +2,7 @@ import {
   RiCustomerService2Line,
   RiStore2Line,
   RiGlobalLine,
+  RiDashboardLine,
 } from "react-icons/ri";
 
 import { Link } from "react-router-dom";
@@ -31,57 +32,71 @@ const TopBar = () => {
             </p>
           </div>
 
-          <div className="hidden shrink-0 items-center gap-5 md:flex">
+          <div className="flex shrink-0 items-center gap-3 sm:gap-5">
             <Link
-              to="/help"
-              className="group flex items-center gap-1.5 transition"
+              to="/entrepreneur/dashboard"
+              className="group flex items-center gap-1.5 rounded-md px-2 py-1 font-semibold transition hover:opacity-80 sm:px-3"
+              style={{
+                backgroundColor: "var(--color-primary)",
+                color: "#FFFFFF",
+              }}
             >
-              <RiCustomerService2Line
-                size={14}
-                style={{
-                  color: "var(--color-primary)",
-                }}
-              />
-
-              <span className="transition-opacity group-hover:opacity-70">
-                Help & Support
-              </span>
+              <RiDashboardLine size={14} />
+              <span>Entrepreneur Dashboard</span>
             </Link>
 
-            <span className="h-4 w-px bg-white/15" />
+            <div className="hidden items-center gap-5 md:flex">
+              <Link
+                to="/help"
+                className="group flex items-center gap-1.5 transition"
+              >
+                <RiCustomerService2Line
+                  size={14}
+                  style={{
+                    color: "var(--color-primary)",
+                  }}
+                />
 
-            <Link
-              to="/products"
-              className="group flex items-center gap-1.5 transition"
-            >
-              <RiStore2Line
-                size={14}
-                style={{
-                  color: "var(--color-primary)",
-                }}
-              />
+                <span className="transition-opacity group-hover:opacity-70">
+                  Help & Support
+                </span>
+              </Link>
 
-              <span className="transition-opacity group-hover:opacity-70">
-                Browse Marketplace
-              </span>
-            </Link>
+              <span className="h-4 w-px bg-white/15" />
 
-            <span className="h-4 w-px bg-white/15" />
+              <Link
+                to="/products"
+                className="group flex items-center gap-1.5 transition"
+              >
+                <RiStore2Line
+                  size={14}
+                  style={{
+                    color: "var(--color-primary)",
+                  }}
+                />
 
-            <a
-              href="https://hunarhub.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="HunarHub Website"
-              className="flex items-center justify-center transition hover:opacity-70"
-            >
-              <RiGlobalLine
-                size={15}
-                style={{
-                  color: "var(--color-primary)",
-                }}
-              />
-            </a>
+                <span className="transition-opacity group-hover:opacity-70">
+                  Browse Marketplace
+                </span>
+              </Link>
+
+              <span className="h-4 w-px bg-white/15" />
+
+              <a
+                href="https://hunarhub.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="HunarHub Website"
+                className="flex items-center justify-center transition hover:opacity-70"
+              >
+                <RiGlobalLine
+                  size={15}
+                  style={{
+                    color: "var(--color-primary)",
+                  }}
+                />
+              </a>
+            </div>
           </div>
         </div>
       </Container>
@@ -89,4 +104,3 @@ const TopBar = () => {
   );
 };
 
-export default TopBar;
