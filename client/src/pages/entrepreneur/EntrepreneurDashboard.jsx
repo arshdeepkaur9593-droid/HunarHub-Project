@@ -23,7 +23,7 @@ const API_BASE_URL = API_USERS_URL
 const ENDPOINTS = {
   products: "/api/products",
   services: "/api/services",
-  orders: "/api/orders",
+  orders: "/api/orders/entrepreneur",
   requests: "/api/service-requests/entrepreneur",
 };
 
