@@ -4,6 +4,7 @@ import { useAuth } from "./context/AuthContext";
 
 // ================= NAVBAR =================
 import { Header } from "./components/Navbar";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 // ================= HOME COMPONENTS =================
 import Hero from "./components/Hero/Hero";
@@ -108,6 +109,8 @@ function EntrepreneurRoute() {
 function App() {
   return (
     <>
+      <ScrollToTop />
+
       {/* ================= NAVBAR ================= */}
 
       <Header />
