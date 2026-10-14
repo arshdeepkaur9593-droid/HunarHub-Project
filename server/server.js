@@ -28,9 +28,9 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
+      "https://hunarhub-frontend-psi.vercel.app",
       "https://hunarhub-frontend-69o5v0143-arshdeep-projects.vercel.app",
-      process.env.CLIENT_URL,
-    ].filter(Boolean),
+    ],
     credentials: true,
     methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
