@@ -7,8 +7,11 @@ import {
 
 import { Link } from "react-router-dom";
 import Container from "../Container/Container";
+import { useAuth } from "../../context/AuthContext";
 
 const TopBar = () => {
+  const { user } = useAuth();
+
   return (
     <div
       className="w-full"
@@ -32,17 +35,20 @@ const TopBar = () => {
             </p>
           </div>
 
-          <Link
-            to="/entrepreneur/dashboard"
-            className="inline-flex shrink-0 items-center gap-1.5 rounded-md px-2.5 py-2 font-semibold transition hover:opacity-85 sm:px-3"
-            style={{
-              backgroundColor: "var(--color-primary)",
-              color: "#FFFFFF",
-            }}
-          >
-            <RiDashboardLine size={15} />
-            <span>Entrepreneur Dashboard</span>
-          </Link>
+          {user?.role === "entrepreneur" && (
+            <Link
+              to="/entrepreneur/dashboard"
+              className="group flex shrink-0 items-center gap-1.5 transition"
+            >
+              <RiDashboardLine
+                size={14}
+                style={{ color: "var(--color-primary)" }}
+              />
+              <span className="transition-opacity group-hover:opacity-70">
+                Become an Entrepreneur
+              </span>
+            </Link>
+          )}
 
           <div className="hidden shrink-0 items-center gap-5 lg:flex">
             <Link
